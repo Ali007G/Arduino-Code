@@ -1,0 +1,23 @@
+// Lab - 03
+
+int r;
+void setup() {
+  for(r=8; r<=12; r++)
+  {
+    pinMode(r, OUTPUT);
+  }
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  for(r=8;r<=12;r++)
+  {
+    digitalWrite(r, HIGH);
+    delay(100);
+  }
+  for(r=8;r<=12;r++)
+  {
+    digitalWrite(r, LOW);
+    delay(100);
+  }
+}
