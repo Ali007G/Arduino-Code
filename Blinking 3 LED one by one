@@ -1,0 +1,25 @@
+// Lab - 02
+
+int x=11, y=12, z=13;
+
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(x, OUTPUT);
+  pinMode(y, OUTPUT);
+  pinMode(z, OUTPUT);
+
+}
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(x, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(200);
+  digitalWrite(x, LOW); // wait for a second
+
+  digitalWrite(y, HIGH);   // turn the LED off by making the voltage LOW
+  delay(200);                      // wait for a second
+  digitalWrite(y, LOW);  // turn the LED on (HIGH is the voltage level)
+
+  digitalWrite(z, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(200);
+  digitalWrite(z, LOW);  // turn the LED on (HIGH is the voltage level)
+}
