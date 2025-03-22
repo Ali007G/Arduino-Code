@@ -1,1 +1,28 @@
 
+// Lab - 05, Binary Counter Pattern
+
+#define NUM_LEDS 3
+int ledPins[NUM_LEDS] = {2, 3, 4};  // Use Pins 2, 3, 4 for LEDs
+
+
+void setup() {
+    for (int i = 0; i < NUM_LEDS; i++) {
+        pinMode(ledPins[i], OUTPUT);  
+    }
+}
+
+
+void loop() {
+    for (int count = 0; count < 8; count++) {  // Count from 0 to 7 (3-bit)
+        displayBinary(count);
+        delay(100);  // LED blink delay
+    }
+}
+
+
+void displayBinary(int num) {
+    for (int i = 0; i < NUM_LEDS; i++) {
+        digitalWrite(ledPins[i], (num >> i) & 1);  
+    }
+}
+
