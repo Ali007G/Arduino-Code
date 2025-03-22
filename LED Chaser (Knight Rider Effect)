@@ -1,3 +1,4 @@
+// Lab -04, LED Chaser (Knight Rider Effect)
 
 #define NUM_LEDS 6  // Number of LEDs
 int ledPins[NUM_LEDS] = {2, 3, 4, 5, 6, 7}; // LED connected pins
