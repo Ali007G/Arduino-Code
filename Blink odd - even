@@ -1,0 +1,40 @@
+// Define the number of LEDs
+const int numLEDs = 6;
+
+// Define the pins for the LEDs (adjust these to match your setup)
+int ledPins[numLEDs] = {8, 9, 10, 11, 12, 13};
+
+void setup() {
+  // Initialize all LED pins as outputs
+  for (int i = 0; i < numLEDs; i++) {
+    pinMode(ledPins[i], OUTPUT);
+  }
+}
+void loop() {
+  // Blink odd-numbered LEDs (1st, 3rd, 5th)
+  for (int i = 0; i < numLEDs; i += 2) {
+    digitalWrite(ledPins[i], HIGH);
+  }
+  delay(500); // Keep on for 500ms
+  
+  // Turn off all LEDs
+  allLEDsOff();
+  delay(100); // Short pause
+  
+  // Blink even-numbered LEDs (2nd, 4th, 6th)
+  for (int i = 1; i < numLEDs; i += 2) {
+    digitalWrite(ledPins[i], HIGH);
+  }
+    delay(500); // Keep on for 500ms
+  
+  // Turn off all LEDs
+  allLEDsOff();
+  delay(100); // Short pause
+}
+
+// Helper function to turn off all LEDs
+void allLEDsOff() {
+  for (int i = 0; i < numLEDs; i++) {
+    digitalWrite(ledPins[i], LOW);
+  }
+}
