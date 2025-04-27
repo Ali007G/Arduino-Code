@@ -1,0 +1,29 @@
+const int numLEDs = 6; // Total LEDs
+int ledPins[numLEDs] = {2, 3, 4, 5, 6, 7}; // Pins for LEDs
+
+void setup() {
+  // Set all LED pins as OUTPUT
+  for (int i = 0; i < numLEDs; i++) {
+    pinMode(ledPins[i], OUTPUT);
+  }
+}
+void loop() {
+  // STEP 1: Turn ON ODD LEDs (1,3,5) & turn OFF EVEN LEDs (2,4,6)
+  for (int i = 0; i < numLEDs; i++) {
+    if (i % 2 == 0) { // Check if LED is in odd position (0,2,4 → 1st,3rd,5th)
+      digitalWrite(ledPins[i], HIGH); // Turn ON odd LEDs
+    } else {
+      digitalWrite(ledPins[i], LOW); // Turn OFF even LEDs
+    }
+  }
+  delay(500); // Keep ON for 500ms (0.5 sec)
+  // STEP 2: Turn ON EVEN LEDs (2,4,6) & turn OFF ODD LEDs (1,3,5)
+  for (int i = 0; i < numLEDs; i++) {
+    if (i % 2 == 1) { // Check if LED is in even position (1,3,5 → 2nd,4th,6th)
+      digitalWrite(ledPins[i], HIGH); // Turn ON even LEDs
+    } else {
+      digitalWrite(ledPins[i], LOW); // Turn OFF odd LEDs
+    }
+  }
+  delay(500); // Keep ON for 500ms (0.5 sec)
+}
