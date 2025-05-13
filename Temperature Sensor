@@ -20,3 +20,24 @@ else
 digitalWrite (13, LOW);
 delay (1000);
 }
+
+/*
+pinMode(13, OUTPUT);
+→ Sets digital pin 13 as an output (to control LED).
+
+Serial.begin(9600);
+→ Initializes Serial Communication at a baud rate of 9600 bps
+→ Required for sending temperature data to Serial Monitor.
+
+analogRead(A0);
+Reads analog voltage from pin A0 where the LM35 is connected.
+
+ADC Range: 0 to 1023 (10-bit)
+
+Voltage Range: 0V to 5V
+
+🔸 temp = (temp * 500) / 1024;
+Converts analog value to temperature in °C.
+
+LM35 outputs 10 mV per °C → 100°C = 1V
+*/
