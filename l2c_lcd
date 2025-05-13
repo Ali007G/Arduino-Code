@@ -5,6 +5,7 @@ LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 void setup()
 {
 lcd.begin (16, 2);
+// initializes the LCD with 16 columns and 2 rows.
 }
 
 void loop()
@@ -18,4 +19,25 @@ lcd.print("CS01");
 delay(200);
 lcd.clear();
 delay(500);
+/*
+a. lcd.clear();
+Clears the entire LCD screen.
+
+Cursor resets to top-left corner (0,0).
+
+b. lcd.setCursor(0,0);
+Moves the cursor to column 0, row 0 (top-left).
+
+c. lcd.print("Hello");
+Prints "Hello" on the first row.
+
+e. lcd.setCursor(0,1);
+Moves the cursor to column 0, row 1 (second line).
+
+f. lcd.print("CS01");
+Prints "CS01" on the second row.
+
+h. lcd.clear();
+Clears the screen again.
+*/
 }
