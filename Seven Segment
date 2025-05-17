@@ -15,7 +15,6 @@ pinMode(d,OUTPUT);
 pinMode(e,OUTPUT);
 pinMode(f,OUTPUT);
 pinMode(g,OUTPUT);
-
 }
 
 void loop() {
