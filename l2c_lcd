@@ -19,6 +19,7 @@ lcd.print("CS01");
 delay(200);
 lcd.clear();
 delay(500);
+}
 /*
 a. lcd.clear();
 Clears the entire LCD screen.
@@ -40,4 +41,4 @@ Prints "CS01" on the second row.
 h. lcd.clear();
 Clears the screen again.
 */
-}
+
